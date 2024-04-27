@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b74y5trjdxa4x"]
 
-[sub_resource type="Environment" id="Environment_o7bpo"]
+[ext_resource type="Environment" uid="uid://dmptvvymlycfi" path="res://assets/world.tres" id="1_g8puw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wfsew"]
 size = Vector3(60, 2, 60)
@@ -12,7 +12,7 @@ size = Vector3(60, 2, 60)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 13.071)
-environment = SubResource("Environment_o7bpo")
+environment = ExtResource("1_g8puw")
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -27,3 +27,6 @@ shape = SubResource("BoxShape3D_wfsew")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 mesh = SubResource("BoxMesh_6ahks")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_g8puw")
